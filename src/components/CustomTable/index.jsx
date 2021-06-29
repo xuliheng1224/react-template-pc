@@ -6,7 +6,7 @@ import { EditableFormRow, EditableCell } from './@components/EditableTable'
 import SettingTableCol from './@components/SettingTableCol'
 import TableConfig, { handleCustomColumns } from './config'
 import './index.less'
-import { getCustomColumns } from './service'
+import { getCustomColumns, getDtaList } from './service'
 
 const { table, pagination, paginationKey } = TableConfig
 
@@ -218,8 +218,11 @@ export default class CustomTable extends Component {
 
     // 获取分页参数
     const params = this.getPaginationParams()
+
+    const formData = this.props.handleRequestData ? this.props.handleRequestData(this.props.formData) : this.props.formData
+
     setTimeout(() => {
-      return this.props.handleRequestData({ ...this.props.formData, ...params }).then(res => {
+      return getDtaList({ ...formData, ...params }).then(res => {
 
         console.log('列表接口数据', res);
 

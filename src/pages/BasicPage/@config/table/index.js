@@ -64,32 +64,10 @@ export default (page) => {
     },
 
     // 获取表格数据的接口
-    handleRequestData: async (params) => {
-      const formData = Object.assign({}, params)
-      console.log("参数", formData);
-      const data = []
-      for (let i = 1; i <= 100; i++) {
-        data.push({
-          id: i,
-          importTime: '2021-6-27 18:00:00',
-          importTotal: i * 10,
-          successNum: i * 8,
-          failedNum: i * 2,
-          createUserName: '许立恒',
-          importStatusName: '成功或失败',
-          type: i % 2,
-          active: i * 2
-        })
-      }
-      return {
-        data,
-        pagination: {
-          page: 1,
-          pageCount: 1,
-          pageSize: 10,
-          totalCount: 100
-        }
-      }
+    handleRequestData: (params) => {
+      const formData = Object.assign({}, params);
+      formData.a = 1;
+      return formData
     },
 
     handleOnSave: async (rows, handleRefresh) => {

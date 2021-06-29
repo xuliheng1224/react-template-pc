@@ -36,11 +36,11 @@ export default class CustomPage extends PureComponent {
 
     return (
       <>
-        <SearchForm wrappedComponentRef={this.formRef} formData={formData} {...this.props.getFormConfig} handleSearch={this.handleSearch} location={location} loading={loading} />
+        <SearchForm wrappedComponentRef={this.formRef} {...this.props.getFormConfig} handleSearch={this.handleSearch} location={location} loading={loading} />
 
         <div style={{ paddingTop: '10px' }}></div>
 
-        <CustomTable wrappedComponentRef={this.tableRef} {...this.props.getTableConfig} location={location} />
+        <CustomTable wrappedComponentRef={this.tableRef} formData={formData} {...this.props.getTableConfig} location={location} />
       </>
     )
   }
