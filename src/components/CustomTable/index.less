@@ -1,0 +1,103 @@
+:global {
+    .custom-table-container {
+        background: #fff;
+        padding-top: 64px;
+        position: relative;
+    
+        .custom-table-tips-bar {
+            height: 64px;
+            line-height: 64px;
+            padding: 0px 12px;
+            width: 40%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .custom-table-operate-bar {
+            height: 64px;
+            line-height: 64px;
+            padding: 0px 24px;
+            text-align: right;
+            width: 60%;
+            position: absolute;
+            right: 0;
+            top: 0;
+    
+            .icon-button {
+                font-size: 16px;
+                cursor: pointer;
+                margin-left: 20px;
+            }
+    
+            .divider {
+                margin: 0 0 0 20px;
+                height: 45%;
+            }
+        }
+    
+        .custom-table-batch-operate-bar {
+            height: 60px;
+            width: calc(100% - 250px);
+            padding: 0px 24px;
+            background: #fff;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            box-shadow: 0 3px 6px -3px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .1), 0 9px 28px 8px rgba(0, 0, 0, .05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+    
+        .custom-table-scroll-bar {
+            width: 100%;
+    
+            .custom-table-slider.ant-slider {
+                height: 0px;
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+                z-index: 10;
+    
+                .ant-slider-rail {
+                    background: #eee;
+                }
+    
+                .ant-slider-track {
+                    display: none;
+                }
+    
+                .ant-slider-handle {
+                    // transform: none !important;
+                }
+            }
+        }
+    }
+}
+
+
+:global {
+    .custom-table-container {
+        .ant-table-small {
+            border: none;
+            border-radius: none;
+        }
+        
+        .ant-table-header {
+            .ant-table-thead {
+                background: rgb(250, 250, 250);
+            }
+        }
+        
+        .ant-table-tbody tr td {
+            border-bottom: 1px solid #f0f0f0 !important;
+        }
+
+        .ant-table-pagination {
+            padding-right: 10px;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+// :global {
+    .setting-form-config-container {
+        width: 100%;
+        height: 600px;
+        display: flex;
+    
+        .setting-form-config-container-left {
+            width: 100%;
+            overflow: auto;
+            padding: 0px 20px;
+    
+            .setting-form-config-container-left-header {
+                font-size: 12px;
+                color: #8091a5;
+                margin-top: 10px;
+            }
+        }
+    
+        .setting-form-config-container-right {
+            min-width: 270px;
+            box-sizing: border-box;
+            border-left: 1px solid #e8e8e8;
+    
+            .setting-form-config-container-right-header {
+                font-size: 12px;
+                color: #8091a5;
+                padding: 10px 15px;
+            }
+    
+            .setting-form-config-container-right-body {
+                height: calc(100% - 38px);
+                overflow: auto;
+                padding: 0px 15px 0px 5px;
+
+                .dragging_container_item {
+                    box-shadow: 0px 0px 12px #bbb;
+                }
+    
+                .setting-form-config-container-right-body-item {
+                    padding: 8px 0px;
+                    padding-left: 10px;
+                    border-bottom: 1px solid #f7f8fa;
+                    // cursor: pointer;
+                    user-select: none;
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: bold;
+                    background: rgba(255, 255, 255, .6);
+    
+                    &:hover {
+                        background: #f7f8fa;
+                    }
+    
+                    .icon-button {
+                        font-size: 16px;
+                        margin-right: 10px;
+                        color: #ddd;
+    
+                        &:hover {
+                            color: #666;
+                        }
+                    }
+                }
+
+                .move {
+                    cursor: move;
+                }
+            }
+        }
+    }
+// }
